@@ -1,20 +1,42 @@
 const compile = x => {
-	let output = '';
+	let letters = [];
+	let lastCode = 0
 
+	// For each character in the string
 	for (let i = 0; i < x.length; i++) {
-		const charCode = x.charCodeAt(i);
-		
-		// If the char code is in range of extended ASCII
-		if (charCode <= 255) {
-			// Add the same amount of spaces as the code of the character
-			for (let k = 0; k < charCode; k++) {
-				output += ' ';
+		const code = x.charCodeAt(i); // Get the character's code
+		let compiledLetter = '';
+
+		// If character code needs a cycle to be represented
+		if (Math.sign(code - lastCode) === -1) {
+			// Cycle to character code 0
+			for (let j = 0; j < 255 - lastCode; j++) {
+				compiledLetter += '+';
 			}
 
-			// Add a tab
-			output += '	';
+			// Add a blank character to mark the end of a cycle
+			compiledLetter += '_';
+
+			// Represent the character code
+			for (let j = 0; j < code; j++) {
+				compiledLetter += '+'
+			}
+		} else {
+			// Represent the character code
+			for (let j = 0; j < code - lastCode; j++) {
+				compiledLetter += '+';
+			}
 		}
+
+		// Mark the end of the character, and update the last code
+		compiledLetter += '.';
+		lastCode = code;
+
+		// Add the letter to the array
+		letters.push(compiledLetter);
 	}
 
-	return output;
+	return letters.join('');
 }
+
+module.exports = compile;

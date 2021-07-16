@@ -6,20 +6,22 @@ const interpret = x => {
 		const char = x.charAt(i);
 
 		// Cycle through ASCII character codes
-		if (charCode >= 250) {
+		if (charCode >= 255) {
 			charCode = 0;
 		}
 
 		// If there is a space, increase the ASCII counter
-		if (char === ' ') {
+		if (char === '+') {
 			charCode++;
 		}
 
 		// If there is a tab, add the character at the current charCode to the output
-		if (char === '	') {
+		if (char === '.') {
 			output += String.fromCharCode(charCode);
 		}
 	}
 
 	return output;
 }
+
+module.exports = interpret;
