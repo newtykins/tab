@@ -11,25 +11,25 @@ const compile = x => {
 		if (Math.sign(code - lastCode) === -1) {
 			// Cycle to character code 0
 			for (let j = 0; j < 255 - lastCode; j++) {
-				compiledLetter += '+';
+				compiledLetter += ' ';
 			}
 
 			// Add a blank character to mark the end of a cycle
-			compiledLetter += '_';
+			compiledLetter += '#';
 
 			// Represent the character code
 			for (let j = 0; j < code; j++) {
-				compiledLetter += '+'
+				compiledLetter += ' '
 			}
 		} else {
 			// Represent the character code
 			for (let j = 0; j < code - lastCode; j++) {
-				compiledLetter += '+';
+				compiledLetter += ' ';
 			}
 		}
 
 		// Mark the end of the character, and update the last code
-		compiledLetter += '.';
+		compiledLetter += '	';
 		lastCode = code;
 
 		// Add the letter to the array

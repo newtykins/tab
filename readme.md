@@ -20,17 +20,18 @@ When the accumulator reaches 255, it resets back to 0, and a command is skipped.
 
 t a b has interpreters and compilers written in many different languages, as you can see in this repository. They are pretty simple to create - feel free to contribute one in a language that you are familiar with in a Pull Request!
 
-#### Interpreters
+#### Interpreters (t a b -> text)
 
 - [JavaScript](interpreters/javascript.js)
+- [Python](interpreters/python.py)
 
-#### Compilers
+#### Compilers (text -> t a b)
 
 - [JavaScript](compilers/javascript.js)
+- [Python](compilers/python.py)
 
 ### Examples
 
-- [Hello World](examples/Hello%20World)
-- [FizzBuzz](examples/FizzBuzz)
+- [Hello World](examples/Hello%20World!)
 
 <sub>See the code's license <a href="license.md">here.</sub>

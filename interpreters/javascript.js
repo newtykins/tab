@@ -11,12 +11,12 @@ const interpret = x => {
 		}
 
 		// If there is a space, increase the ASCII counter
-		if (char === '+') {
+		if (char === ' ') {
 			charCode++;
 		}
 
 		// If there is a tab, add the character at the current charCode to the output
-		if (char === '.') {
+		if (char === '	') {
 			output += String.fromCharCode(charCode);
 		}
 	}
