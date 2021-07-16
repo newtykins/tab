@@ -5,27 +5,27 @@
 
 ### What is t a b?
 
-t a b is a minimal esoteric programming language for the 23rd century. It is pretty much the exact same thing as [Small](https://esolangs.org/wiki/Small), but even more arbitrary and harder to read!
+`t a b` is a minimal esoteric programming language for the 23rd century. It is pretty much the exact same thing as [Small](https://esolangs.org/wiki/Small), but even more arbitrary and harder to read!
 
 ### How does it work?
 
 It has 2 commands:
 
-- " " increments the accumulator.
-- "   " outputs the accumulator as an ASCII char.
+- " " (space) increments the accumulator.
+- "   " (tab) outputs the accumulator as an ASCII char.
 
 When the accumulator reaches 255, it resets back to 0, and a command is skipped.
 
 ### Interpreters and Compilers
 
-t a b has interpreters and compilers written in many different languages, as you can see in this repository. They are pretty simple to create - feel free to contribute one in a language that you are familiar with in a Pull Request!
+`t a b` has interpreters and compilers written in many different languages, as you can see in this repository. They are pretty simple to create - feel free to contribute one in a language that you are familiar with in a Pull Request!
 
-#### Interpreters (t a b -> text)
+#### Interpreters (`t a b` -> text)
 
 - [JavaScript](interpreters/javascript.js)
 - [Python](interpreters/python.py)
 
-#### Compilers (text -> t a b)
+#### Compilers (text -> `t a b`)
 
 - [JavaScript](compilers/javascript.js)
 - [Python](compilers/python.py)
