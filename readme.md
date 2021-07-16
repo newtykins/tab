@@ -5,7 +5,7 @@
 
 ### What is t a b?
 
-`t a b` is a minimal esoteric programming language for the 23rd century. It is pretty much the exact same thing as [Small](https://esolangs.org/wiki/Small), but even more arbitrary and harder to read!
+`t a b` is a minimal esoteric programming language for the 23rd century. It is pretty much the exact same thing as [Small](https://esolangs.org/wiki/Small), but even more arbitrary and harder to read! Play around with it using the [online interpreter/compiler](https://tab.newtt.me/) (:
 
 ### How does it work?
 
